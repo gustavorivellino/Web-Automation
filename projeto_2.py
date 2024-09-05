@@ -6,9 +6,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 import logging
-
+import os
 #Pegando a tabela  dos produtos
-tb_buscas = pd.read_excel(r'C:\Users\user\Desktop\Projeto 2\buscas.xlsx')
+
+arquivo = os.getcwd()
+tb_buscas = pd.read_excel(arquivo +r'/buscas.xlsx')
 
 #Criando o navegador
 
